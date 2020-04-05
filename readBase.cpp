@@ -10,7 +10,7 @@
 int readBase(int Natoms, int atomKind, std::vector<int> &atom,std::vector<int> &atomBasis,
 		std::vector<int> &totalBase)
 {
-        std::cout << "Insert file name:";
+        std::cout << "Insert file name: ";
         std::string cryOut;
         std::getline(std::cin,cryOut);
         std::ifstream ifile(cryOut);

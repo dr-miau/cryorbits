@@ -123,6 +123,7 @@ int main()
 	std::cout << "Printing the orbitals numbers...\n";
 
 	int counterOrb{0};
+	int printedOrbs{0};
 	for(int i=0;i<Natoms;i++)
 	{
 		if(atom[i]==qAtom)
@@ -131,7 +132,8 @@ int main()
 			for(int i=0;i<l2orbit(qOrbit);i++)
 			{
 				counterOrb++;
-				std::cout << counterOrb << ' ';
+				printedOrbs++;
+				std::cout << counterOrb << ',';
 			}
 			counterOrb=counterOrb+residualPostOrb;
 			//std::cout << "Atom " << atom[i] << " in " << i << "position.\n";
@@ -150,6 +152,7 @@ int main()
 			//std::cout << "Atom in " << i << "position.\n";
 	}
 
+	std::cout << "Orbits printed: " << printedOrbs << ".\n";
 
 	//for(int i=0;i<atomKind*2;i++)
 	//	std::cout << totalBase[i] << " ";
